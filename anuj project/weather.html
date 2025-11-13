@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Checker — Current Weather</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Weather Checker</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="week-weather.html">Week Forecast</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="sun-icon">☀️</span>
+          <span class="moon-icon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero small-hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner container">
+        <h1>Current Weather</h1>
+        <p class="lead">Enter a city or use your location.</p>
+        <div class="weather-panel">
+          <form id="city-form" class="row">
+            <div class="input-container">
+              <input id="city-input" type="text" placeholder="Enter city (e.g. London)" autocomplete="off" />
+              <div id="suggestions" class="suggestions-list" hidden></div>
+            </div>
+            <button id="city-submit" type="submit">Search</button>
+            <button id="loc-btn" type="button">Use My Location</button>
+          </form>
+          <div class="unit-toggle">
+            <label for="unit-switch">°C</label>
+            <input type="checkbox" id="unit-switch">
+            <label for="unit-switch">°F</label>
+          </div>
+
+          <div id="current" class="card result animate-in" aria-live="polite" hidden>
+            <div class="current-top">
+              <div>
+                <h2 id="loc-name"></h2>
+                <p id="desc" class="muted"></p>
+              </div>
+              <div class="temp">
+                <img id="icon" alt="weather icon" src="https://i.pinimg.com/originals/06/c4/f7/06c4f70ec5931e2342e703e8a3f0a253.png" />
+                <div><span id="temp-val"></span><span class="temp-unit">°C</span></div>
+              </div>
+            </div>
+            <div class="current-stats">
+              <div class="stat-item">
+                <span class="stat-icon">💧</span>
+                <span>Humidity: <strong id="hum"></strong>%</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-icon">💨</span>
+                <span>Wind: <strong id="wind"></strong> m/s</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-icon">📊</span>
+                <span>Pressure: <strong id="press"></strong> hPa</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="error" class="card error" hidden></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/weather.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

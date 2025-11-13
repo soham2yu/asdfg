@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Checker — 3-Day Forecast</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Weather Checker</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="weather.html">Weather Now</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="sun-icon">☀️</span>
+          <span class="moon-icon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero small-hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner container">
+        <h1>3-Day Forecast</h1>
+        <p class="lead">Get the weekly outlook. Use your device location for immediate results.</p>
+
+        <div class="forecast-panel">
+          <form id="week-form" class="row">
+            <div class="input-container">
+              <input id="week-city" type="text" placeholder="Enter city (optional)" autocomplete="off" />
+              <div id="week-suggestions" class="suggestions-list" hidden></div>
+            </div>
+            <button id="week-search" type="submit">Get Forecast</button>
+            <button id="week-loc" type="button">Use My Location</button>
+          </form>
+          <div class="unit-toggle">
+            <label for="week-unit-switch">°C</label>
+            <input type="checkbox" id="week-unit-switch">
+            <label for="week-unit-switch">°F</label>
+          </div>
+
+          <div id="week-error" class="card error" hidden></div>
+          <div id="week-results" class="grid animate-in">
+            <!-- Forecast cards will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/week-weather.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

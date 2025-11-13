@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Checker — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Weather Checker</a>
+      <nav class="nav">
+        <a href="weather.html">Weather Now</a>
+        <a href="week-weather.html">Week Forecast</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="sun-icon">☀️</span>
+          <span class="moon-icon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner container">
+        <h1>Fast • Accurate • Local</h1>
+        <p class="lead">Check current weather or view a 3-day forecast for your location.</p>
+        <div class="options">
+          <a class="card" href="weather.html" aria-label="Current weather">
+            <h3>Weather Check</h3>
+            <p>Get current conditions by city or by your device location.</p>
+          </a>
+          <a class="card" href="week-weather.html" aria-label="Seven day forecast">
+            <h3>Week Forecast</h3>
+            <p>See a clean 3-day forecast that adapts to your location.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container about">
+      <h2>About this Website</h2>
+      <p>This website displays real-time current weather and a 3-day forecast for any city or your location using live WeatherAPI data. It features a clean, responsive design and is easy to use on any device.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+    
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
